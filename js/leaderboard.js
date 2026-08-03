@@ -10,12 +10,32 @@
  */
 
 // Points de coupure pour les pseudos "bicolores" (2 classes CSS distinctes).
-// clé = colorKey tel que stocké dans le JSON (ex: "major1-major2")
+// clé = colorKey (ex: "major1-major2")
 // valeur = nombre de caractères du pseudo affectés à la 1ère couleur.
 const TWO_TONE_SPLITS = {
     "major1-major2": 2,   // "Ma" + "jor"
     "chillo1-chillo2": 2, // "Ch" + "illo"
 };
+
+// Reconnaissance automatique de la couleur à partir du pseudo (insensible à la casse).
+// Pour ajouter/modifier une run, il suffit d'écrire le nom en clair
+// (ex: "verifier": "Chillo") — pas besoin de préciser de colorKey à la main.
+// Si un joueur/modérateur ne figure pas dans cette liste, son nom s'affiche en blanc (défaut).
+const KNOWN_NAME_COLORS = {
+    "awbryy": "awbryy",
+    "chiarasm64": "chiara",
+    "mercuryspeedruns": "mercury",
+    "major": "major1-major2",
+    "chillo": "chillo1-chillo2",
+};
+
+/** Détermine le colorKey à utiliser : priorité à un colorKey explicite dans le JSON,
+ * sinon reconnaissance automatique du nom, sinon "default". */
+function resolveColorKey(name, explicitColorKey) {
+    if (explicitColorKey) return explicitColorKey;
+    if (!name) return "default";
+    return KNOWN_NAME_COLORS[name.trim().toLowerCase()] || "default";
+}
 
 function escapeHtml(str) {
     const div = document.createElement("div");
@@ -23,10 +43,11 @@ function escapeHtml(str) {
     return div.innerHTML;
 }
 
-/** Génère le HTML coloré d'un pseudo à partir de son colorKey (ex: "awbryy", "major1-major2", "default"). */
+/** Génère le HTML coloré d'un pseudo. Le colorKey est optionnel : s'il est absent,
+ * il est déduit automatiquement du nom via KNOWN_NAME_COLORS. */
 function renderPlayerName(name, colorKey) {
     if (!name) return "";
-    const key = colorKey || "default";
+    const key = resolveColorKey(name, colorKey);
     const parts = key.split("-");
 
     if (parts.length === 1) {
