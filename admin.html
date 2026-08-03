@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Ajouter une run</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .adminBox {
+            background-color: rgba(7, 23, 69, 0.7);
+            border-radius: 0.5rem;
+            padding: 1.5rem 2rem;
+        }
+        .adminBox h2 {
+            margin-top: 0;
+        }
+        .formRow {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .formField {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .formField label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .formField input, .formField select, .formField textarea {
+            background-color: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.3rem;
+            color: white;
+            padding: 0.5rem;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .formField.timeGroup {
+            flex-direction: row;
+            gap: 0.5rem;
+            align-items: flex-end;
+        }
+        .formField.timeGroup input {
+            width: 4rem;
+        }
+        .checkboxRow {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .checkboxRow input {
+            width: auto;
+        }
+        button#submitBtn {
+            background-color: rgba(0, 110, 255, 0.9);
+            color: white;
+            border: none;
+            border-radius: 0.3rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button#submitBtn:hover {
+            background-color: rgba(0, 130, 255, 1);
+        }
+        button#submitBtn:disabled {
+            background-color: rgba(100, 100, 100, 0.5);
+            cursor: not-allowed;
+        }
+        #statusMsg {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: 0.3rem;
+            display: none;
+        }
+        #statusMsg.success {
+            background-color: rgba(0, 150, 0, 0.3);
+            border: 1px solid rgba(0, 200, 0, 0.5);
+            display: block;
+        }
+        #statusMsg.error {
+            background-color: rgba(200, 0, 0, 0.3);
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            display: block;
+        }
+        #statusMsg.loading {
+            background-color: rgba(255, 200, 0, 0.2);
+            border: 1px solid rgba(255, 200, 0, 0.4);
+            display: block;
+        }
+        .warningBox {
+            background-color: rgba(255, 140, 0, 0.15);
+            border: 1px solid rgba(255, 140, 0, 0.4);
+            border-radius: 0.3rem;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .idPreview {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chiara's Speedrunning Website — Admin</h1>
+    </header>
+    <main>
+        <div class="adminBox">
+            <h2>Ajouter / modifier une run</h2>
+            <div class="warningBox">
+                ⚠️ Ton token GitHub reste uniquement dans ton navigateur (jamais envoyé
+                ailleurs qu'à l'API GitHub). Ne partage jamais cette page ni ton token
+                publiquement. Utilise un <strong>fine-grained personal access token</strong>
+                limité à ce seul dépôt, avec la permission "Contents: Read and write".
+            </div>
+
+            <div class="formRow">
+                <div class="formField">
+                    <label for="token">Token d'accès GitHub</label>
+                    <input type="password" id="token" placeholder="github_pat_xxx...">
+                </div>
+                <div class="formField">
+                    <label for="repoOwner">Propriétaire / repo</label>
+                    <input type="text" id="repoOwner" value="ChiaraSM64/SM64_Mobile">
+                </div>
+                <div class="formField">
+                    <label for="branch">Branche</label>
+                    <input type="text" id="branch" value="main">
+                </div>
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,0.15); margin: 1.5rem 0;">
+
+            <div class="formRow">
+                <div class="formField">
+                    <label for="category">Catégorie</label>
+                    <select id="category">
+                        <option value="120_Star">120 Star</option>
+                        <option value="70_Star">70 Star</option>
+                        <option value="16_Star_No_LBLJ" selected>16 Star No LBLJ</option>
+                        <option value="16_Star_LBLJ">16 Star LBLJ</option>
+                        <option value="1_Star">1 Star</option>
+                        <option value="0_Star">0 Star</option>
+                    </select>
+                </div>
+                <div class="formField">
+                    <label for="player">Joueur (pseudo)</label>
+                    <input type="text" id="player" placeholder="ex: Jugo de naranja">
+                </div>
+                <div class="formField">
+                    <label for="flag">Code pays (drapeau, optionnel)</label>
+                    <input type="text" id="flag" placeholder="ex: fr, us, de, br...">
+                </div>
+            </div>
+
+            <div class="formRow">
+                <div class="formField timeGroup">
+                    <div>
+                        <label for="hours">h</label>
+                        <input type="number" id="hours" min="0" value="0">
+                    </div>
+                    <div>
+                        <label for="minutes">m</label>
+                        <input type="number" id="minutes" min="0" max="59" value="0">
+                    </div>
+                    <div>
+                        <label for="seconds">s</label>
+                        <input type="number" id="seconds" min="0" max="59" value="0">
+                    </div>
+                </div>
+                <div class="formField">
+                    <label for="date">Date de la run</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="formField">
+                    <div class="checkboxRow" style="margin-top: 1.3rem;">
+                        <input type="checkbox" id="verified" checked>
+                        <label for="verified">Run vérifiée</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formRow">
+                <div class="formField">
+                    <label for="verifier">Vérificateur (nom du modo)</label>
+                    <input type="text" id="verifier" placeholder="ex: Chillo">
+                </div>
+                <div class="formField">
+                    <label for="video">Lien vidéo (YouTube)</label>
+                    <input type="text" id="video" placeholder="https://youtu.be/xxxx ou https://www.youtube.com/watch?v=xxxx">
+                </div>
+            </div>
+
+            <div class="formRow">
+                <div class="formField" style="flex-basis: 100%;">
+                    <label for="description">Description (optionnel)</label>
+                    <textarea id="description" rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="formRow">
+                <div class="formField">
+                    <label for="runId">ID de la run (auto-généré — modifie-le uniquement pour éditer une run existante)</label>
+                    <input type="text" id="runId" class="idPreview">
+                </div>
+            </div>
+
+            <button id="submitBtn">Ajouter la run</button>
+            <div id="statusMsg"></div>
+        </div>
+    </main>
+    <footer>
+        <p><a href="index.html">← Retour au site</a></p>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
