@@ -778,6 +778,15 @@
           "time": "13m 02s",
           "date": "2025-03-14",
           "verified": true
+        },
+        {
+          "id": "1pbTronks94",
+          "player": "Tronks94",
+          "flag": "co.png",
+          "colorKey": null,
+          "time": "8m 48s",
+          "date": "2026-07-30",
+          "verified": true
         }
       ]
     },
@@ -1945,6 +1954,19 @@
       "verifierColorKey": null,
       "video": "https://www.youtube.com/embed/MiBYoc6fF6Y?si=Qm62BZ-3Bv-VZIdX",
       "description": "FINALLY SUB 18"
+    },
+    "1pbTronks94": {
+      "id": "1pbTronks94",
+      "categoryName": "1 Star",
+      "categoryKey": "1_Star",
+      "date": "2026-07-30",
+      "time": "8m 48s",
+      "player": "Tronks94",
+      "playerColorKey": null,
+      "verifier": "awbryy",
+      "verifierColorKey": null,
+      "video": "https://www.youtube.com/embed/afHXI688oHY?si=hsQOfYncXjdejlIv",
+      "description": "I got mi sub 9 please include me in the ranking 😭"
     }
   }
 }
