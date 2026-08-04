@@ -674,15 +674,6 @@
           "time": "23m 05s",
           "date": "2026-06-04",
           "verified": true
-        },
-        {
-          "id": "16LBLJpbChiaraSM64",
-          "player": "ChiaraSM64",
-          "flag": "fr.png",
-          "colorKey": null,
-          "time": "1h 02m 03s",
-          "date": "2026-08-03",
-          "verified": true
         }
       ]
     },
@@ -1928,19 +1919,6 @@
       "verifierColorKey": null,
       "video": "https://player.twitch.tv/?video=530596218&parent=https://chiarasm64.github.io/",
       "description": ""
-    },
-    "16LBLJpbChiaraSM64": {
-      "id": "16LBLJpbChiaraSM64",
-      "categoryName": "16 Star LBLJ",
-      "categoryKey": "16_Star_LBLJ",
-      "date": "2026-08-03",
-      "time": "1h 02m 03s",
-      "player": "ChiaraSM64",
-      "playerColorKey": null,
-      "verifier": "Major",
-      "verifierColorKey": null,
-      "video": "https://www.youtube.com/embed/fkebqOR6GDQ?si=krLhxISn0Cn89ZK1",
-      "description": "TEST test \nmeow"
     },
     "16NoLBLJpbTronks94": {
       "id": "16NoLBLJpbTronks94",
