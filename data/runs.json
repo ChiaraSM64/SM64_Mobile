@@ -597,6 +597,15 @@
           "time": "43m 21s",
           "date": "2022-12-29",
           "verified": true
+        },
+        {
+          "id": "16NoLBLJpbTronks94",
+          "player": "Tronks94",
+          "flag": "co.png",
+          "colorKey": null,
+          "time": "17m 40s",
+          "date": "2026-07-12",
+          "verified": true
         }
       ]
     },
@@ -1923,6 +1932,19 @@
       "verifierColorKey": null,
       "video": "https://www.youtube.com/embed/fkebqOR6GDQ?si=krLhxISn0Cn89ZK1",
       "description": "TEST test \nmeow"
+    },
+    "16NoLBLJpbTronks94": {
+      "id": "16NoLBLJpbTronks94",
+      "categoryName": "16 Star No LBLJ",
+      "categoryKey": "16_Star_No_LBLJ",
+      "date": "2026-07-12",
+      "time": "17m 40s",
+      "player": "Tronks94",
+      "playerColorKey": null,
+      "verifier": "Major",
+      "verifierColorKey": null,
+      "video": "https://www.youtube.com/embed/MiBYoc6fF6Y?si=Qm62BZ-3Bv-VZIdX",
+      "description": "FINALLY SUB 18"
     }
   }
 }
