@@ -615,10 +615,10 @@
         {
           "id": "16LBLJpbAwbryy",
           "player": "awbryy",
-          "flag": "de.png",
-          "colorKey": "awbryy",
-          "time": "15m 12s",
-          "date": "2026-06-23",
+          "flag": "co.png",
+          "colorKey": null,
+          "time": "14m 58s",
+          "date": "2026-08-04",
           "verified": true
         },
         {
@@ -906,14 +906,14 @@
       "id": "16LBLJpbAwbryy",
       "categoryName": "16 Star LBLJ",
       "categoryKey": "16_Star_LBLJ",
-      "date": "2026-06-23",
-      "time": "15m 12s",
+      "date": "2026-08-04",
+      "time": "14m 58s",
       "player": "awbryy",
-      "playerColorKey": "awbryy",
-      "verifier": "MercurySpeedruns",
-      "verifierColorKey": "mercury",
-      "video": "https://www.youtube.com/embed/DKQEOmk4XWQ?si=PfYxEN-02Ewe6I5J",
-      "description": ""
+      "playerColorKey": null,
+      "verifier": "Major",
+      "verifierColorKey": null,
+      "video": "https://www.youtube.com/embed/jpW-uJOdZdg?si=cxsefEaObxnqlxZY",
+      "description": "the grind doesnt end here, see yall in supernova!"
     },
     "16LBLJpbGoldenSmallKing": {
       "id": "16LBLJpbGoldenSmallKing",
