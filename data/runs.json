@@ -615,6 +615,15 @@
           "time": "17m 40s",
           "date": "2026-07-12",
           "verified": true
+        },
+        {
+          "id": "16NoLBLJpbCysse",
+          "player": "Cysse",
+          "flag": "fr.png",
+          "colorKey": null,
+          "time": "18m 24s",
+          "date": "2026-08-14",
+          "verified": true
         }
       ]
     },
@@ -1967,6 +1976,19 @@
       "verifierColorKey": null,
       "video": "https://www.youtube.com/embed/jf6X-SdVbb0?si=wRpLzC7vzp3TGnpy",
       "description": "so close (the sub 1 hour is coming) | Mod note : visual glitch in pss"
+    },
+    "16NoLBLJpbCysse": {
+      "id": "16NoLBLJpbCysse",
+      "categoryName": "16 Star No LBLJ",
+      "categoryKey": "16_Star_No_LBLJ",
+      "date": "2026-08-14",
+      "time": "18m 24s",
+      "player": "Cysse",
+      "playerColorKey": null,
+      "verifier": "Major",
+      "verifierColorKey": null,
+      "video": "https://www.youtube.com/embed/DFOZw57Yrmg",
+      "description": ""
     }
   }
 }
