@@ -133,6 +133,15 @@
           "time": "1h 27m 03s",
           "date": "2024-08-14",
           "verified": false
+        },
+        {
+          "id": "70pbTronks94",
+          "player": "Tronks94",
+          "flag": "co.png",
+          "colorKey": null,
+          "time": "1h 00m 54s",
+          "date": "2026-08-11",
+          "verified": true
         }
       ]
     },
@@ -1945,6 +1954,19 @@
       "verifierColorKey": null,
       "video": "https://www.youtube.com/embed/afHXI688oHY?si=hsQOfYncXjdejlIv",
       "description": "I got mi sub 9 please include me in the ranking 😭"
+    },
+    "70pbTronks94": {
+      "id": "70pbTronks94",
+      "categoryName": "70 Star",
+      "categoryKey": "70_Star",
+      "date": "2026-08-11",
+      "time": "1h 00m 54s",
+      "player": "Tronks94",
+      "playerColorKey": null,
+      "verifier": "Chillo",
+      "verifierColorKey": null,
+      "video": "https://www.youtube.com/embed/jf6X-SdVbb0?si=wRpLzC7vzp3TGnpy",
+      "description": "so close (the sub 1 hour is coming) | Mod note : visual glitch in pss"
     }
   }
 }
