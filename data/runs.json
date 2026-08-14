@@ -652,9 +652,9 @@
           "id": "16LBLJpbJugoDeNaranja",
           "player": "Jugo de naranja",
           "flag": "ve.png",
-          "colorKey": "default",
-          "time": "15m 55s",
-          "date": "2026-07-31",
+          "colorKey": null,
+          "time": "15m 38s",
+          "date": "2026-08-12",
           "verified": true
         },
         {
@@ -932,14 +932,14 @@
       "id": "16LBLJpbJugoDeNaranja",
       "categoryName": "16 Star LBLJ",
       "categoryKey": "16_Star_LBLJ",
-      "date": "2026-31-07",
-      "time": "15m 55s",
+      "date": "2026-08-12",
+      "time": "15m 38s",
       "player": "Jugo de naranja",
       "playerColorKey": null,
-      "verifier": "awbryy",
-      "verifierColorKey": "awbryy",
-      "video": "https://www.youtube.com/embed/Tfwb7Ubl7mE?si=qw1dqAAneyTBub-P",
-      "description": "this is trash"
+      "verifier": "Chillo",
+      "verifierColorKey": null,
+      "video": "https://www.youtube.com/embed/fb7rUjzEdIk?si=lktHQUPoVlIeb15r",
+      "description": "15:2x soon"
     },
     "16LBLJpbMajor": {
       "id": "16LBLJpbMajor",
