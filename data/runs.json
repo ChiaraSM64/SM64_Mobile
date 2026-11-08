@@ -806,9 +806,9 @@
           "id": "0pbJugoDeNaranja",
           "player": "Jugo de naranja",
           "flag": "ve.png",
-          "colorKey": "default",
-          "time": "7m 00s",
-          "date": "2025-11-15",
+          "colorKey": null,
+          "time": "6m 36s",
+          "date": "2026-11-01",
           "verified": true
         },
         {
@@ -837,14 +837,14 @@
       "id": "0pbJugoDeNaranja",
       "categoryName": "0 Star",
       "categoryKey": "0_Star",
-      "date": "2025-11-15",
-      "time": "7m 00s",
+      "date": "2026-11-01",
+      "time": "6m 36s",
       "player": "Jugo de naranja",
       "playerColorKey": null,
       "verifier": "Chillo",
-      "verifierColorKey": "chillo1-chillo2",
-      "video": "https://www.youtube.com/embed/-dxT1vNpZvc",
-      "description": ""
+      "verifierColorKey": null,
+      "video": "https://www.youtube.com/embed/TehuX6XiNeA?si=Qhz3ecqRy4eMH1gr",
+      "description": "VAMOOOOOS"
     },
     "0pbLittlezombie": {
       "id": "0pbLittlezombie",
